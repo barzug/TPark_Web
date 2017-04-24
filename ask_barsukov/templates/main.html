@@ -1,0 +1,39 @@
+{% extends "./base.html" %}
+{% block title %}Main{% endblock %}
+{% block page_header %}
+    <h1 class="blog-title">{{ header_main }}</h1>
+    <a href="{{ header_additional_href }}">{{ header_additional }}</a>
+{% endblock %}
+{% block content %}
+    {% for question in questions %}
+        <div class="question">
+            <div class="row row-post">
+                <div class="blog-post">
+                    <h2 class="blog-post-title">{{ question.title }}</h2>
+                    <p class="blog-post-meta">{{ question.date }} by <a href="#">{{ question.author }}</a><img
+                            class="avatar"
+                            src={{ question.avatar }}>
+                    </p>
+                    <p>{{ question.text }}</p>
+                    <p class="blog-post-meta col-md-2">
+                        <span class="glyphicon glyphicon-plus text-success" aria-hidden="true"></span>
+                        {{ question.rating }}
+                        <span class="glyphicon glyphicon-minus text-danger" aria-hidden="true"></span>
+                    </p>
+                    <p class="blog-post-meta col-md-2">
+                        <a href="{% url 'question' question.id %}">Answer({{ question.get_answer_count }})</a>
+                    </p>
+                    <p class="blog-post-meta col-md-offset-3 col-md-5">
+                        Tags:
+                        {% for tag in question.get_tags %}
+                            <a href="{% url 'tag' tag %}">{{ tag }}</a>
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    {% include "paginate.html" %}
+{% endblock %}
+
+

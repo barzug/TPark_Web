@@ -1,0 +1,42 @@
+{% extends "./base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+    <div class="blog-header col-md-offset-2">
+        <h1 class="blog-title">Log in</h1>
+    </div>
+    <div class="row input-row">
+        <div class=" col-md-offset-2 col-md-10">
+            <p class="text-danger">Sorry, wrong password</p>
+        </div>
+    </div>
+    <div class="row input-row">
+        <div class="col-md-2 col-md-offset-2">
+            <h4>Login</h4>
+        </div>
+        <div class="col-md-4">
+            <input required type="text" class="form-control form-settings" placeholder="dr_pepper">
+        </div>
+        <div class="col-md-4">
+            <p class="text-danger error-msg">Sorry,...</p>
+        </div>
+    </div>
+
+    <div class="row input-row">
+        <div class="col-md-2 col-md-offset-2">
+            <h4>Password</h4>
+        </div>
+        <div class="col-md-4">
+            <input required type="password" class="form-control form-settings">
+        </div>
+        <div class="col-md-4">
+            <p class="text-danger error-msg">Sorry,...</p>
+        </div>
+    </div>
+    <div class="row input-row">
+        <div class="col-md-offset-4 col-md-8">
+            <button class="btn btn-default btn-lg">Log In!</button>
+        </div>
+    </div>
+{% endblock %}
+
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/demo.css" rel="stylesheet">
+</head>
+<body class="container">
+<nav class="navbar navbar-default ">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img src="/static/logo.svg">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input id="logo" type="text" size="70" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <a class="navbar-brand" href="#">
+                    <!--<img class="my-avatar" src="logo.svg">-->
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">Sergey<img class="my-avatar" src="logo.svg"> <b
+                                class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">settings</a></li>
+                            <li><a href="#">log out</a></li>
+                        </ul>
+                    </li>
+                </a>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="row basic-row">
+    <div class="col-md-8 blog-main">
+        <div class="blog-header col-md-offset-2">
+            <h1 class="blog-title">Settings: Dr. Pepper</h1>
+        </div>
+        <div class="row input-row">
+            <div class="col-md-2 col-md-offset-2">
+                <h4>Login</h4>
+            </div>
+            <div class="col-md-4">
+                <input required type="text" class="form-control form-settings" value="dr_pepper" >
+            </div>
+            <div class="col-md-4">
+                <p class="text-danger error-msg">Sorry,...</p>
+            </div>
+        </div><!-- /.blog-main -->
+
+        <div class="row input-row">
+            <div class="col-md-2 col-md-offset-2">
+                <h4>Email</h4>
+            </div>
+            <div class="col-md-4">
+                <input required type="text" class="form-control form-settings" value="dr.pepper@mail.ru">
+            </div>
+            <div class="col-md-4">
+                <p class="text-danger error-msg">Sorry,...</p>
+            </div>
+        </div><!-- /.blog-main -->
+
+        <div class="row input-row">
+            <div class="col-md-2 col-md-offset-2">
+                <h4>NickName</h4>
+            </div>
+            <div class="col-md-4">
+                <input required type="text" class="form-control form-settings" value="Dr. Pepper">
+            </div>
+            <div class="col-md-4">
+                <p class="text-danger error-msg">Sorry,...</p>
+            </div>
+        </div><!-- /.blog-main -->
+        <div class="row input-row">
+            <div class="col-md-2 col-md-offset-2">
+                <h4>Upload avatar</h4>
+            </div>
+            <div class="col-md-8">
+                <img class="avatar-settings" src="logo.svg">
+                <div class="input-group">
+                    <input type="text" class="form-control form-settings" value="c:\....">
+                    <div class="input-group-btn form-settings">
+                        <button class="btn btn-default ">Choose</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.blog-main -->
+
+        <div class="row input-row">
+            <div class="col-md-offset-4 col-md-8">
+                <button class="btn btn-default btn-lg">Save</button>
+            </div>
+        </div><!-- /.blog-main -->
+    </div>
+    <div class="col-md-3 col-sm-offset-1 blog-sidebar">
+        <div class="sidebar-module sidebar-module-inset">
+            <h2>Popular Tags</h2>
+            <ol class="list-unstyled">
+                <li><a href="#">Tag 1</a></li>
+                <li><a href="#">Tag 2</a></li>
+                <li><a href="#">Tag 3</a></li>
+            </ol>
+        </div>
+        <div class="sidebar-module">
+            <h2>Best Members</h2>
+            <ol class="list-unstyled">
+                <li><a href="#">Mem 1</a></li>
+                <li><a href="#">Mem 2</a></li>
+                <li><a href="#">Mem 3</a></li>
+
+            </ol>
+        </div>
+    </div>
+</div><!-- /.blog-sidebar -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

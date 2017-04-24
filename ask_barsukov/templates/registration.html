@@ -1,0 +1,88 @@
+{% extends "./base.html" %}
+{% block title %}Registration{% endblock %}
+{% block content %}
+    <div class="blog-header col-md-offset-2">
+        <h1 class="blog-title">Registration</h1>
+    </div>
+    <div class="row input-row">
+        <div class=" col-md-offset-2 col-md-10">
+            <p class="text-danger">Sorry, this email address already registred</p>
+        </div>
+    </div>
+    <div class="row input-row">
+        <div class="col-md-2 col-md-offset-2">
+            <h4>Login</h4>
+        </div>
+        <div class="col-md-4">
+            <input required type="text" class="form-control form-settings" placeholder="dr_pepper">
+        </div>
+        <div class="col-md-4">
+            <p class="text-danger error-msg">Sorry, login already in use</p>
+        </div>
+    </div>
+
+    <div class="row input-row">
+        <div class="col-md-2 col-md-offset-2">
+            <h4>Email</h4>
+        </div>
+        <div class="col-md-4">
+            <input required type="text" class="form-control form-settings" placeholder="dr.pepper@mail.ru">
+        </div>
+        <div class="col-md-4">
+            <p class="text-danger error-msg">Sorry, enter correct email</p>
+        </div>
+    </div>
+
+    <div class="row input-row">
+        <div class="col-md-2 col-md-offset-2">
+            <h4>NickName</h4>
+        </div>
+        <div class="col-md-4">
+            <input required type="text" class="form-control form-settings" placeholder="Dr. Pepper">
+        </div>
+        <div class="col-md-4">
+            <p class="text-danger error-msg">Sorry, nickname already in use</p>
+        </div>
+    </div>
+    <div class="row input-row">
+        <div class="col-md-2 col-md-offset-2">
+            <h4>Password</h4>
+        </div>
+        <div class="col-md-4">
+            <input required type="password" class="form-control form-settings">
+        </div>
+        <div class="col-md-4">
+            <p class="text-danger error-msg">Sorry,...</p>
+        </div>
+    </div>
+    <div class="row input-row">
+        <div class="col-md-2 col-md-offset-2">
+            <h4>Repeat password</h4>
+        </div>
+        <div class="col-md-4">
+            <input required type="password" class="form-control form-settings">
+        </div>
+        <div class="col-md-4">
+            <p class="text-danger error-msg">Sorry,...</p>
+        </div>
+    </div>
+    <div class="row input-row">
+        <div class="col-md-2 col-md-offset-2">
+            <h4>Upload avatar</h4>
+        </div>
+        <div class="col-md-8">
+            <div class="input-group">
+                <input type="text" class="form-control form-settings" value="c:\....">
+                <div class="input-group-btn form-settings">
+                    <button class="btn btn-default ">Choose</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row input-row">
+        <div class="col-md-offset-4 col-md-8">
+            <button class="btn btn-default btn-lg">Register!</button>
+        </div>
+    </div>
+{% endblock %}

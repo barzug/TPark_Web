@@ -1,0 +1,53 @@
+{% extends "./base.html" %}
+{% block title %}Question{% endblock %}
+{% block page_header %}
+    <div class="row row-post row-post-main">
+        <div class="blog-post">
+            <h2 class="blog-post-title">{{ question.title }}</h2>
+            <p class="blog-post-meta">{{ question.date }} by <a href="#">{{ question.author }}</a><img class="avatar"
+                                                                                                     src="{{ question.avatar }}">
+            </p>
+            <p>{{ question.text }}</p>
+            <p class="blog-post-meta col-md-2">
+                <span class="glyphicon glyphicon-plus text-success" aria-hidden="true"></span>
+                {{ question.rating }}
+                <span class="glyphicon glyphicon-minus text-danger" aria-hidden="true"></span>
+            </p>
+            <p class="blog-post-meta col-md-offset-5 col-md-5">
+                Tags:
+                {% for tag in question.get_tags %}
+                    <a href="{% url 'tag' tag %}">{{ tag }}</a>
+                {% endfor %}
+            </p>
+        </div>
+    </div>
+{% endblock %}
+<hr>
+{% block content %}
+    <div class="row basic-row">
+        {% for answer in answers %}
+            <div class="question">
+                <div class="row row-post">
+                    <div class="blog-post">
+                        <p>{{ answer.text }}</p>
+                        <p class="blog-post-meta col-md-2">
+                            <span class="glyphicon glyphicon-plus text-success" aria-hidden="true"></span>
+                            {{ answer.rating }}
+                            <span class="glyphicon glyphicon-minus text-danger" aria-hidden="true"></span>
+                        </p>
+                        <p class="blog-post-meta col-md-2">
+                            Correct! <input type="checkbox" class="check checkbox-inline">
+                        </p>
+                        <p class="blog-post-meta col-md-offset-4 col-md-4">
+                            {{ answer.date }} by <a href="#">{{ answer.author }}</a><img class="avatar"
+                                                                                       src="{{ answer.avatar }}">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        <hr>
+        <input type="text" class="form-control ask-text" placeholder="Enter you answer here">
+        <button class="btn btn-default btn-lg btn-answer">Answer</button>
+    </div>
+{% endblock %}
